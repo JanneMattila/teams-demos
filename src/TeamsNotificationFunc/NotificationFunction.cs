@@ -2,6 +2,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
+using TeamsNotificationFunc.Interfaces;
 
 namespace AzureDigitalTwinsUpdaterFunc;
 
@@ -25,7 +26,7 @@ public class NotificationFunction
             try
             {
                 _logger.LogTrace("Function processing message: {Input}", input);
-                var notification = JsonSerializer.Deserialize<Dictionary<string, object>>(input);
+                var notifications = JsonSerializer.Deserialize<Notifications>(input);
             }
             catch (Exception ex)
             {
