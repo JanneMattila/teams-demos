@@ -1,6 +1,4 @@
-﻿namespace AzureDigitalTwinsUpdaterFunc;
-
-public class NotificationOptions
+﻿public class NotificationOptions
 {
-    public string WebhookUrl { get; set; } = string.Empty;
+    public string KeyVaultUrl { get; set; } = string.Empty;
 }

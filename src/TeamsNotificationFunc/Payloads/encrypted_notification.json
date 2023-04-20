@@ -1,0 +1,24 @@
+{
+  "value": [
+    {
+      "subscriptionId": "8338ed0c-ce0a-4c28-8580-6e8d79fcc159",
+      "changeType": "created",
+      "clientState": "<your client state from subscription>",
+      "subscriptionExpirationDateTime": "2023-04-18T07:00:00-07:00",
+      "resource": "teams('52855e0a-b0db-4393-af16-df781c632a91')/channels('19:3976a83f2145549e994ec6135cbd442f@thread.tacv2')/messages('1681824635411')/replies('1682825267123')",
+      "resourceData": {
+        "id": "1682825267123",
+        "@odata.type": "#Microsoft.Graph.chatMessage",
+        "@odata.id": "teams('52855e0a-b0db-4393-af16-df781c632a91')/channels('19:3976a83f2145549e994ec6135cbd442f@thread.tacv2')/messages('1681824635411')/replies('1682825267123')"
+      },
+      "encryptedContent": {
+        "data": "<encrypted notification data>",
+        "dataSignature": "<signature>",
+        "dataKey": "<data key>",
+        "encryptionCertificateId": "<your certificate identifier from subscription>",
+        "encryptionCertificateThumbprint": "<your certificate thumbprint>"
+      },
+      "tenantId": "cbf8b53b-3ab5-4802-9021-57f1d15c157a"
+    }
+  ]
+}

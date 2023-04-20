@@ -1,0 +1,16 @@
+{
+  "value": [
+    {
+      "subscriptionId": "NA",
+      "subscriptionExpirationDateTime": "NA",
+      "clientState": "NA",
+      "changeType": "Validation: Testing client application reachability for subscription Request-Id: 8338ed0c-ce0a-4c28-8580-6e8d79fcc159",
+      "resource": "NA",
+      "resourceData": {
+        "@odata.type": "NA",
+        "@odata.id": "NA",
+        "id": "NA"
+      }
+    }
+  ]
+}
