@@ -1,6 +1,5 @@
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System.Text.Json;
 using TeamsNotificationFunc.Interfaces;
 using TeamsNotificationFunc.Services;
@@ -8,14 +7,14 @@ using TeamsNotificationFunc.Services;
 public class NotificationFunction
 {
     private readonly ILogger _logger;
-    private readonly NotificationOptions _options;
     private readonly DecryptionService _decryptionService;
+    private readonly DatabaseService _databaseService;
 
-    public NotificationFunction(ILoggerFactory loggerFactory, IOptions<NotificationOptions> options, DecryptionService decryptionService)
+    public NotificationFunction(ILoggerFactory loggerFactory, DecryptionService decryptionService, DatabaseService databaseService)
     {
         _logger = loggerFactory.CreateLogger<NotificationFunction>();
-        _options = options.Value;
         _decryptionService = decryptionService;
+        _databaseService = databaseService;
     }
 
     [Function("NotificationFunc")]
@@ -43,6 +42,7 @@ public class NotificationFunction
                     else if (notification.EncryptedContent != null && notification.EncryptedContent.Data != null)
                     {
                         var notificationData = await _decryptionService.DecryptAsync(notification.EncryptedContent);
+                        await _databaseService.StoreDocumentAsync(notificationData);
                     }
                     else
                     {

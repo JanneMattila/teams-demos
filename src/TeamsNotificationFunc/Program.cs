@@ -19,8 +19,14 @@ var host = new HostBuilder()
             {
                 configuration.GetSection("NotificationOptions").Bind(settings);
             });
+        s.AddOptions<DatabaseOptions>()
+            .Configure<IConfiguration>((settings, configuration) =>
+            {
+                configuration.GetSection("DatabaseOptions").Bind(settings);
+            });
 
         s.AddSingleton<DecryptionService>();
+        s.AddSingleton<DatabaseService>();
     })
     .Build();
 

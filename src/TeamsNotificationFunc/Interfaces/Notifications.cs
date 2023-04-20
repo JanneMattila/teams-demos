@@ -26,7 +26,7 @@ public class Notification
 
     // The UTC date and time when the webhooks subscription expires.
     [JsonPropertyName("subscriptionExpirationDateTime")]
-    public DateTimeOffset SubscriptionExpirationDateTime { get; set; }
+    public string SubscriptionExpirationDateTime { get; set; }
 
     // The unique identifier for the webhooks subscription.
     [JsonPropertyName("subscriptionId")]
