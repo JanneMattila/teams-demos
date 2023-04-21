@@ -9,3 +9,5 @@ Various Teams demos
 [Reduce missing subscriptions and change notifications](https://learn.microsoft.com/en-us/graph/webhooks-lifecycle)
 
 [Decrypting resource data from change notifications](https://learn.microsoft.com/en-us/graph/webhooks-with-resource-data#decrypting-resource-data-from-change-notifications)
+
+[Notification payloads](https://learn.microsoft.com/en-us/graph/teams-changenotifications-chatmessage#notification-payloads)
