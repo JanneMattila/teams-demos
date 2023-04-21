@@ -4,7 +4,10 @@
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
     "EventHubConnectionString": "<your event hub connection string>",
-    "EventHubName": "notifications",
-    "NotificationOptions:WebhookUrl": "https://<your-echo-service>.azurewebsites.net"
+    "EventHubName": "<your-eventhub-name>",
+    "NotificationOptions:KeyVaultUrl": "https://<your-keyvault>.vault.azure.net/",
+    "DatabaseOptions:CosmosUrl": "https://<your-cosmos-db>.documents.azure.com:443/",
+    "DatabaseOptions:Database": "<your-cosmos-database>",
+    "DatabaseOptions:Container": "<your-container>"
   }
 }
