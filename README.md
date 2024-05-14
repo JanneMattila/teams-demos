@@ -91,6 +91,30 @@ Here is example decrypted notification data:
 }
 ```
 
+Here is example `reauthorizationRequired` notification data:
+
+```json
+{
+  "value": [
+    {
+      "lifecycleEvent": "reauthorizationRequired",
+      "subscriptionId": "775f1f0b-8278-4431-9189-f9e417cbd675",
+      "resource": "Subscriptions/775f1f0b-8278-4431-9189-f9e417cbd675",
+      "clientState": "bd15e755-f364-4a56-baaf-d6e449f2332e",
+      "sequence": null,
+      "resourceData": {
+        "@odata.type": "#microsoft.graph.subscription",
+        "@odata.id": "subscriptions/775f1f0b-8278-4431-9189-f9e417cbd675",
+        "id": "775f1f0b-8278-4431-9189-f9e417cbd675"
+      },
+      "encryptedContent": null,
+      "organizationId": "3f5eef5c-176e-4e3c-a09a-96b817cabbd7",
+      "subscriptionExpirationDateTime": "2024-05-14T01:16:42.3272862-07:00"
+    }
+  ]
+}
+```
+
 ## Links
 
 [Set up notifications for changes in resource data](https://learn.microsoft.com/en-us/graph/webhooks)
