@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using TeamsNotificationFunc.Services;
 
 var host = new HostBuilder()
-    .ConfigureFunctionsWorkerDefaults()
+    .ConfigureFunctionsWebApplication()
     .ConfigureServices(s =>
     {
         s.AddApplicationInsightsTelemetryWorkerService();
@@ -26,7 +26,12 @@ var host = new HostBuilder()
             });
 
         s.AddSingleton<DecryptionService>();
-        s.AddSingleton<DatabaseService>();
+
+        // Use Cosmos DB for backend storage:
+        //s.AddSingleton<IDatabaseService, DatabaseService>();
+
+        // Use local filesystem for backend storage:
+        s.AddSingleton<IDatabaseService, FilesystemDatabaseService>();
     })
     .Build();
 

@@ -8,9 +8,9 @@ public class NotificationFunction
 {
     private readonly ILogger _logger;
     private readonly DecryptionService _decryptionService;
-    private readonly DatabaseService _databaseService;
+    private readonly IDatabaseService _databaseService;
 
-    public NotificationFunction(ILoggerFactory loggerFactory, DecryptionService decryptionService, DatabaseService databaseService)
+    public NotificationFunction(ILoggerFactory loggerFactory, DecryptionService decryptionService, IDatabaseService databaseService)
     {
         _logger = loggerFactory.CreateLogger<NotificationFunction>();
         _decryptionService = decryptionService;

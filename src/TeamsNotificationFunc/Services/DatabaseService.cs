@@ -9,7 +9,7 @@ using TeamsNotificationFunc.Data;
 
 namespace TeamsNotificationFunc.Services;
 
-public class DatabaseService
+public class DatabaseService : IDatabaseService
 {
     private readonly ILogger _logger;
     private readonly DatabaseOptions _options;
@@ -41,7 +41,7 @@ public class DatabaseService
             _container = database.GetContainer(_options.Container);
         }
 
-        var data = JsonObject.Parse(json);
+        var data = JsonNode.Parse(json);
 
         // You can override the id here if you want to
         // data["id"] = Guid.NewGuid().ToString();
