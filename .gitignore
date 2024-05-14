@@ -351,3 +351,5 @@ MigrationBackup/
 
 **/.env
 **/*.http
+**/*.cer
+**/*.pfx
