@@ -1,0 +1,72 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "version": "1.0.1",
+    "manifestVersion": "1.17",
+    "id": "6133eb93-cbe1-41f0-a6cc-7c293ed88611",
+    "name": {
+        "short": "RSC Demo app1",
+        "full": "RSC Demo app1"
+    },
+    "developer": {
+        "name": "Janne Mattila",
+        "websiteUrl": "https://www.jannemattila.com",
+        "privacyUrl": "https://www.jannemattila.com/privacy",
+        "termsOfUseUrl": "https://www.jannemattila.com/termsofuse"
+    },
+    "description": {
+        "short": "RSC Demo app1",
+        "full": "RSC Demo app1 is demo about using RSC permissions"
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "f0f8260d-cd5c-438a-a708-9872406fc67b",
+            "scopes": [
+                "team"
+            ],
+            "isNotificationOnly": false,
+            "supportsCalling": false,
+            "supportsVideo": false,
+            "supportsFiles": false
+        }
+    ],
+    "validDomains": [],
+    "webApplicationInfo": {
+        "id": "f0f8260d-cd5c-438a-a708-9872406fc67b",
+        "resource": ""
+    },
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "ChannelMessage.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "ChannelMessage.Send.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "ChannelSettings.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamMember.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Owner.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Member.Read.Group",
+                    "type": "Application"
+                }
+            ]
+        }
+    }
+}
