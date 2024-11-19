@@ -22,8 +22,10 @@ Set-MgBetaChatRscConfiguration -State EnabledForAllApps
 # Install app: "RSC Demo App1" (under "rsc-demo-app1" folder)
 
 # **Alternatively**, you can enable the resource-specific consent for a specific app
+# Get the app ID:
+# https://graph.microsoft.com/beta/appCatalogs/teamsApps
 $permissions = "ChannelMessage.Read.Group", "ChannelMessage.Send.Group", "ChannelSettings.Read.Group", "TeamMember.Read.Group", "Owner.Read.Group", "Member.Read.Group"
-New-MgBetaTeamAppPreapproval -TeamsAppId "6133eb93-cbe1-41f0-a6cc-7c293ed88611" -ResourceSpecificApplicationPermissionsAllowedForTeams $permissions -TeamLevelSensitivityLabelCondition AnySensitivityLabel
+New-MgBetaTeamAppPreapproval -TeamsAppId "18d8e3cc-24bf-48e7-a4d2-3796826170e6" -ResourceSpecificApplicationPermissionsAllowedForTeams $permissions -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 
 # Verify installation:
 # https://admin.teams.microsoft.com/policies/manage-apps

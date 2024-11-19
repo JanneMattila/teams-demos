@@ -353,3 +353,4 @@ MigrationBackup/
 **/*.http
 **/*.cer
 **/*.pfx
+**/*.zip
